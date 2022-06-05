@@ -1,6 +1,6 @@
 cc_binary(
   name = "arkan",
-  srcs = ["greeting.cpp", "greeting.hpp"],
+  srcs = glob(["**/*.hpp", "**/*.cpp"]),
   visibility = ["//visibility:public"],
   linkshared = True,
 )
