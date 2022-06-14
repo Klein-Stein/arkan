@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Variable
+# Variables
 A_BUILDDIR=./build
 A_OUTDIR=$A_BUILDDIR/out
 A_ANDROID_SDK=$ANDROID_HOME
