@@ -43,38 +43,38 @@ if [[ ! -z $A_ANDROID_NDK ]]; then
 fi
 
 
-#################
-# Linux platform
-#################
-for ABI in "x86_64"; do
+# #################
+# # Linux platform
+# #################
+# for ABI in "x86_64"; do
 
-    LINUX_BUILDDIR=$A_BUILDDIR/linux/$ABI
-    LINUX_OUTDIR=$A_OUTDIR/linux/$ABI
-    mkdir -p $LINUX_BUILDDIR
-    mkdir -p $LINUX_OUTDIR
+#     LINUX_BUILDDIR=$A_BUILDDIR/linux/$ABI
+#     LINUX_OUTDIR=$A_OUTDIR/linux/$ABI
+#     mkdir -p $LINUX_BUILDDIR
+#     mkdir -p $LINUX_OUTDIR
 
-    cmake -S . -B $LINUX_BUILDDIR \
-        -DCMAKE_TOOLCHAIN_FILE=toolchains/${ABI}_linux_gnu.toolchain.cmake
+#     cmake -S . -B $LINUX_BUILDDIR \
+#         -DCMAKE_TOOLCHAIN_FILE=toolchains/${ABI}_linux_gnu.toolchain.cmake
 
-    cmake --build $LINUX_BUILDDIR -j $A_THREADS
-    cp $LINUX_BUILDDIR/*.so $LINUX_OUTDIR
+#     cmake --build $LINUX_BUILDDIR -j $A_THREADS
+#     cp $LINUX_BUILDDIR/*.so $LINUX_OUTDIR
 
-done
+# done
 
-###################
-# Windows platform
-###################
-for ABI in "x86_64"; do
+# ###################
+# # Windows platform
+# ###################
+# for ABI in "x86_64"; do
 
-    WINDOWS_BUILDDIR=$A_BUILDDIR/windows/$ABI
-    WINDOWS_OUTDIR=$A_OUTDIR/windows/$ABI
-    mkdir -p $LINUX_BUILDDIR
-    mkdir -p $LINUX_OUTDIR
+#     WINDOWS_BUILDDIR=$A_BUILDDIR/windows/$ABI
+#     WINDOWS_OUTDIR=$A_OUTDIR/windows/$ABI
+#     mkdir -p $LINUX_BUILDDIR
+#     mkdir -p $LINUX_OUTDIR
 
-    cmake -S . -B $WINDOWS_BUILDDIR \
-        -DCMAKE_TOOLCHAIN_FILE=toolchains/${ABI}_windows_gnu.toolchain.cmake
+#     cmake -S . -B $WINDOWS_BUILDDIR \
+#         -DCMAKE_TOOLCHAIN_FILE=toolchains/${ABI}_windows_gnu.toolchain.cmake
 
-    cmake --build $WINDOWS_BUILDDIR -j $A_THREADS
-    cp $WINDOWS_BUILDDIR/*.so $WINDOWS_OUTDIR
+#     cmake --build $WINDOWS_BUILDDIR -j $A_THREADS
+#     cp $WINDOWS_BUILDDIR/*.so $WINDOWS_OUTDIR
 
-done
+# done
