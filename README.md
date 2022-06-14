@@ -38,7 +38,7 @@ brew install llvm
 
 2. Launch Android Studio and install Android SDK (for Android compilation; optional):
 	
-	5.1. Be sure, you have installed **Android NDK r21.4.7075529** and **Android Build Tools v.30.0.0**
+	2.1. Be sure, you have installed **Android NDK r21.4.7075529** and **Android Build Tools v.30.0.0**
 
 3. Be sure, you have exported the next environment variable in `~./zshrc` (for Android compilation; optional):
 	```
