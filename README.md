@@ -1,4 +1,4 @@
-# ARKAN
+# ARKANOID
 
 Cross-platform open source AR engine
 
