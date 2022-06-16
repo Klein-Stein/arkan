@@ -1,8 +1,9 @@
 package com.kleinstein.arkan;
 
-class Greeting {
+public class Greeting {
+
     static {
-        System.loadLibrary("arkan_aar_jni");
+        System.loadLibrary("arkanoid");
     }
 
     public native String greeting();

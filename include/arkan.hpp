@@ -1,6 +1,6 @@
 #ifndef __ARKAN_HPP__
 #define __ARKAN_HPP__
 
-#include "lib/cpp/greeting.hpp"
+#include "../lib/greeting.hpp"
 
 #endif // __ARKAN_HPP__

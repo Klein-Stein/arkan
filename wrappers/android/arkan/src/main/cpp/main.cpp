@@ -4,7 +4,7 @@
 
 using namespace arkan;
 
-JNIEXPORT jstring JNICALL
+extern "C" JNIEXPORT jstring JNICALL
 Java_com_kleinstein_arkan_Greeting_greeting(JNIEnv *env, jclass clazz) {
-  return env->NewStringUTF(greeting().c_str());
+    return env->NewStringUTF(greeting().c_str());
 }
