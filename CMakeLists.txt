@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Build the native Arkan library
 add_library(arkan SHARED
-    lib/cpp/greeting.cpp
+    lib/greeting.cpp
 )
 set_target_properties(arkan PROPERTIES VERSION ${PROJECT_VERSION})
 set_target_properties(arkan PROPERTIES SOVERSION 0)
-set_target_properties(arkan PROPERTIES PUBLIC_HEADER lib/cpp/include/arkan.hpp)
+set_target_properties(arkan PROPERTIES PUBLIC_HEADER include/arkan.hpp)
