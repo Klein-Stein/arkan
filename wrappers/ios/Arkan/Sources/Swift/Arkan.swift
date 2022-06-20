@@ -1,5 +1,6 @@
-public struct HelloWorldCore {
-  public static var string: String {
-    return "Hello, World!"
-  }
+public struct Arkan {
+    public private(set) var text = "Hello, World!"
+
+    public init() {
+    }
 }
