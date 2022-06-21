@@ -21,7 +21,10 @@ let package = Package(
         .target(
             name: "ArkanObjC",
             dependencies: [],
-            path: "Sources/ObjC"),
+            path: "Sources/ObjC",
+            cxxSettings: [
+                .headerSearchPath("../../../../"),
+            ]),
         
         .target(
             name: "Arkan",
