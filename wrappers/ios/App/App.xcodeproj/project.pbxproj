@@ -49,7 +49,6 @@
 		925A1D092861345800CD2858 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925A1D0D2861345800CD2858 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		925A1D0F2861345800CD2858 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		925A1D262861352E00CD2858 /* Arkan */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Arkan; path = ../Arkan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +145,6 @@
 		925A1D252861352E00CD2858 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				925A1D262861352E00CD2858 /* Arkan */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

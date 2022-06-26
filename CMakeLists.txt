@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Build the native Arkan library
-add_library(arkan SHARED
+add_library(arkan STATIC
     lib/greeting.cpp
 )
 set_target_properties(arkan PROPERTIES VERSION ${PROJECT_VERSION})

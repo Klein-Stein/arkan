@@ -6,11 +6,11 @@
 //
 
 #import "Arkan.h"
-#import <arkan>
+#import <arkan.hpp>
 
-@interface Greeting ()
+@implementation Greeting
 
-- (NSString*)greeting {
+- (NSString*) greeting {
     std::string greet = arkan::greeting();
     return [NSString stringWithUTF8String:greet.c_str()];
 }

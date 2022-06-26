@@ -22,10 +22,9 @@ let package = Package(
             name: "ArkanObjC",
             dependencies: [],
             path: "Sources/ObjC",
-            publicHeadersPath: ".",
-            cxxSettings: [
-                .headerSearchPath("../CPP"),
-            ]
+           cxxSettings: [
+               .headerSearchPath("../CPP"),
+           ]
         ),
         
         .target(
