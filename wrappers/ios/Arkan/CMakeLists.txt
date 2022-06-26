@@ -26,11 +26,11 @@ set(CMAKE_C_FLAGS "-x objective-c")
 set(CMAKE_CXX_FLAGS "-x objective-c++")
 set(CMAKE_EXE_LINKER_FLAGS "-framework Foundation")
 
-add_library(carkan STATIC Sources/ObjC/Arkan.mm)
+add_library(Arkan STATIC Sources/ObjC/Arkan.mm)
 
-target_link_libraries(carkan arkan)
-target_include_directories(carkan PUBLIC Sources/ObjC)
-set_target_properties(carkan PROPERTIES
+target_link_libraries(Arkan arkan)
+target_include_directories(Arkan PUBLIC Sources/ObjC)
+set_target_properties(Arkan PROPERTIES
   FRAMEWORK TRUE
   FRAMEWORK_VERSION CXX
   MACOSX_FRAMEWORK_IDENTIFIER com.KleinStein.Arkan
@@ -39,7 +39,7 @@ set_target_properties(carkan PROPERTIES
   VERSION 16.4.0
   # "compatibility version" in semantic format in Mach-O binary file
   SOVERSION 1.0.0
-  PUBLIC_HEADER Arkan.h
+  PUBLIC_HEADER Sources/ObjC/Arkan.h
   XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "iPhone Developer"
 )
 # if(BUILD_TESTING)
