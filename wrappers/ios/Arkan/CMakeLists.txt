@@ -1,13 +1,6 @@
 cmake_minimum_required(VERSION 3.15.1)
 
-project(SwiftDemo LANGUAGES CXX C Swift)
-
-# place all modules into `swift` in the root of the build tree
-set(CMAKE_Swift_MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/swift)
-
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+project(Arkan LANGUAGES CXX C)
 
 # enable shared libraries by default (Windows, Darwin)
 #
@@ -21,8 +14,6 @@ endif()
 if(CMAKE_BUILD_TYPE STREQUAL Debug)
   option(BUILD_TESTING "Build tests" YES)
 endif()
-
-include(CTest)
 
 add_subdirectory(Sources)
 # if(BUILD_TESTING)
