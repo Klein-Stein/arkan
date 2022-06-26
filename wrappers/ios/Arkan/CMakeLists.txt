@@ -15,7 +15,33 @@ if(CMAKE_BUILD_TYPE STREQUAL Debug)
   option(BUILD_TESTING "Build tests" YES)
 endif()
 
-add_subdirectory(Sources)
+set(ARKAN_ROOT ../../..)
+
+# Add an ARKAN's CMakeLists.txt
+add_subdirectory(${ARKAN_ROOT} ${ARKAN_ROOT}/build EXCLUDE_FROM_ALL)
+
+include_directories(${ARKAN_ROOT}/include)
+
+set(CMAKE_C_FLAGS "-x objective-c")
+set(CMAKE_CXX_FLAGS "-x objective-c++")
+set(CMAKE_EXE_LINKER_FLAGS "-framework Foundation")
+
+add_library(carkan STATIC Sources/ObjC/Arkan.mm)
+
+target_link_libraries(carkan arkan)
+target_include_directories(carkan PUBLIC Sources/ObjC)
+set_target_properties(carkan PROPERTIES
+  FRAMEWORK TRUE
+  FRAMEWORK_VERSION CXX
+  MACOSX_FRAMEWORK_IDENTIFIER com.KleinStein.Arkan
+#   MACOSX_FRAMEWORK_INFO_PLIST Info.plist
+  # "current version" in semantic format in Mach-O binary file
+  VERSION 16.4.0
+  # "compatibility version" in semantic format in Mach-O binary file
+  SOVERSION 1.0.0
+  PUBLIC_HEADER Arkan.h
+  XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "iPhone Developer"
+)
 # if(BUILD_TESTING)
 #   add_subdirectory(Tests)
 # endif()
