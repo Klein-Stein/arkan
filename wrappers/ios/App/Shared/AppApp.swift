@@ -2,7 +2,7 @@
 //  AppApp.swift
 //  Shared
 //
-//  Created by Denis Sologub on 21.06.2022.
+//  Created by Denis Sologub on 27.06.2022.
 //
 
 import SwiftUI

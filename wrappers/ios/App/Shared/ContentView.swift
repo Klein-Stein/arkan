@@ -2,14 +2,15 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by Denis Sologub on 21.06.2022.
+//  Created by Denis Sologub on 27.06.2022.
 //
 
 import SwiftUI
+import Arkan
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text(greeting())
             .padding()
     }
 }
